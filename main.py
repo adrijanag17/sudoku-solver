@@ -1,19 +1,10 @@
 from sudoku import *
+from game_boards import game_one
+
 
 def main():
-    game = [
-        [7, 0, 0, 0, 0, 9, 3, 0, 1],
-        [1, 0, 0, 0, 2, 0, 0, 0, 0],
-        [3, 0, 0, 0, 8, 0, 0, 0, 6],
-        [6, 0, 0, 7, 0, 0, 0, 0, 5],
-        [0, 8, 0, 0, 9, 0, 0, 0, 3],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 4, 0, 0, 5, 0, 0, 0, 9],
-        [0, 6, 0, 0, 0, 2, 0, 5, 0],
-        [0, 0, 0, 0, 0, 0, 2, 1, 0]
-    ]
-    if solve_sudoku(game,0,0):
-        print_grid(game)
+    if sudoku_solvable(game_one, 0, 0):
+        print_grid(game_one)
     else:
         print("No solution")
 
